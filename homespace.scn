@@ -1,50 +1,54 @@
 {
   "objects": [
     {
-      "type": "application/rendersettings",
-      "content": {
-        "background": {
-          "color": [0, 0, 0]
-        },
-        "fog": {
-          "fogType": "exp",
-          "args": [[6.3, 4.35, 9.7], 0.02]
-        },
-        "dof": {
-          "focus": 3.0,
-          "aperture": 0.00002,
-          "maxblur": 0.005
-        },
-        "hdr": {
-          "adaptive": true,
-          "resolution": 256,
-          "adaptionRate": 100,
-          "maxLuminance": 10,
-          "minLuminance": 0,
-          "middleGrey": 3
-        },
-        "bloom": {
-          "strength": 0.25,
-          "radius": 0.5,
-          "threshold": 0.8
-        }
-      }
-    },
-    {
       "type": "application/light",
       "content": {
         "lightType": "ambient",
-        "args": [[255, 255, 255], 0.1]
+        "args": [[255, 255, 255], 2]
       }
     },
     {
       "type": "application/light",
       "content": {
         "lightType": "directional",
-        "args": [[255, 255, 255], 2],
-        "shadow": [50, 4096, 0.1, 1000, 0, 0.2]
-      },
-      "position": [6,10,0]
+        "args": [[255, 255, 255], 4],
+        "position": [1, 2, 3]
+      }
+    },
+    {
+      "type": "application/rendersettings",
+      "content": {
+        "fog": {
+          "fogType": "exp",
+          "args": [[255, 255, 255], 0.01]
+        },
+        "dof": {
+          "focus": 3.0,
+          "aperture": 0.00001,
+          "maxblur": 0.001
+        },
+        "hdr": {
+          "adaptive": true,
+          "resolution": 256,
+          "adaptionRate": 50,
+          "maxLuminance": 20,
+          "minLuminance": 0,
+          "middleGrey": 3
+        },
+        "bloom": {
+          "strength": 0.1,
+          "radius": 0.3,
+          "threshold": 0.99
+        }
+      }
+    },
+    {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "start_url": "https://webaverse.github.io/skybox-anime/"
     },
     {
       "position": [
@@ -58,21 +62,7 @@
         0,
         0.7071
       ],
-      "start_url": "https://raw.githubusercontent.com/webaverse/homespace_new/master/homespace.glb"
-    },
-    {
-      "position": [
-        -2,
-        -0.2,
-        -8
-      ],
-      "quaternion": [
-        0,
-        0.7071067811865475,
-        0,
-        0.7071067811865475
-      ],
-      "start_url": "https://webaverse.github.io/fox/"
+      "start_url": "https://local-compiler.webaverse.com/scenes/homespace_new/homespace.glb"
     }
   ]
 }
