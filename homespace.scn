@@ -4,15 +4,16 @@
       "type": "application/light",
       "content": {
         "lightType": "ambient",
-        "args": [[255, 255, 255], 1]
+        "args": [[30, 100, 255], 1]
       }
     },
     {
       "type": "application/light",
       "content": {
         "lightType": "directional",
-        "args": [[255, 255, 255], 4],
-        "position": [1, 2, 3]
+        "args": [[255, 255, 255], 5],
+        "position": [1, 10, 3],
+        "shadow": [50, 4096, 0.1, 1000, 0, 0.2]
       }
     },
     {
@@ -20,12 +21,17 @@
       "content": {
         "fog": {
           "fogType": "exp",
-          "args": [[255, 255, 255], 0.01]
+          "args": [[30, 100, 255], 0.001]
         },
         "dof": {
           "focus": 0.1,
           "aperture": 1,
           "maxblur": 0.001
+        },
+        "ssao": {
+          "kernelRadius": 8,
+          "minDistance": 0.004,
+          "maxDistance": 0.05
         },
         "hdr": {
           "adaptive": true,
@@ -48,7 +54,15 @@
         0,
         0
       ],
-      "start_url": "https://webaverse.github.io/skybox-anime/"
+      "start_url": "https://webaverse.github.io/atmospheric-sky/"
+    },
+    {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "start_url": "https://webaverse.github.io/cloud-cards/"
     },
     {
       "position": [
@@ -62,7 +76,7 @@
         0,
         0.7071
       ],
-      "start_url": "https://local-compiler.webaverse.com/scenes/homespace_new/homespace.glb"
+      "start_url": "./homespace.glb"
     }
   ]
 }
